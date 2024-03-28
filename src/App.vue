@@ -1,10 +1,11 @@
 <script>
 import axios from 'axios';
 import AppHeader from '../src/components/AppHeader.vue';
+import ProjectCard from './components/ProjectCard.vue';
 const endpoint = 'http://localhost:8000/api/projects/';
 export default{
     name: 'Boolfolio',
-    components: {AppHeader},
+    components: {AppHeader, ProjectCard},
     data: () => ({
       projects: []
     }),
@@ -25,9 +26,7 @@ export default{
   <AppHeader/>
   <main class="container mt-5">
     <h1>I miei progetti</h1>
-    <ul>
-      <li v-for="project in projects" :key="project.id">{{ project.title }}</li>
-    </ul>
+    <ProjectCard v-for="project in projects" :key="project.id" :project="project"/>
   </main>
 </template>
 

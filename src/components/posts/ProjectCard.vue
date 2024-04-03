@@ -25,10 +25,10 @@ export default {
 }
 </script>
 <template>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3">
         <div class="row g-0">
-            <div class="col-md-4">
-                <img :src="project.image" class="img-fluid rounded-start" :alt="project.title">
+            <div class="col-md-2">
+                <img :src="project.image" class="img-fluid rounded-start w-100" :alt="project.title">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
